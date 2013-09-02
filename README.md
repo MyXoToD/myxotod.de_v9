@@ -1,0 +1,3 @@
+# MyXoToD.de Version 9
+
+This is the 9th version of my private website/blog. [Kevin](http://www.kevingimbel.com) introduced me to [Jekyll](http://www.jekyllrb.com) and I was that much amazed, that I build a new version of my website with it. I'll push the result up here. If you have any question about Jekyll you should just go to the website or read Kevin's ["Guid to get started with Jekyll"](http://www.jekyllrb.com/jekyll-guide).
