@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700|Roboto:400,300,700);
+/* ---------- VARIABLES ---------- */
+/* ---------- INCLUDES ---------- */
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +10,15 @@
 html, body {
   min-height: 100%; }
 
+/* ---------- MISC ---------- */
 body {
   background-image: url("http://sphotos-a.ak.fbcdn.net/hphotos-ak-ash4/1008855_659620994050652_1704849053_o.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-position: center; }
+  background-position: center;
+  font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  color: white; }
 
 .overlay {
   z-index: 10;
@@ -22,8 +30,18 @@ body {
   .overlay.blue {
     background: rgba(64, 165, 198, 0.9); }
   .overlay.green {
-    background: rgba(165, 198, 64, 0.9); }
+    background: rgba(39, 174, 96, 0.8); }
+  .overlay.orange {
+    background: rgba(230, 126, 34, 0.8); }
 
 .wrapper {
   z-index: 20;
-  position: relative; }
+  position: relative;
+  padding: 6.667em 0 2em 6.667em; }
+
+header .avatar {
+  height: 150px;
+  width: 150px;
+  background-image: url("/img/avatar.jpg");
+  border: 4px solid #e67e22;
+  border-radius: 100%; }

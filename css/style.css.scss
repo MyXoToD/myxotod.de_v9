@@ -1,3 +1,14 @@
+/* ---------- VARIABLES ---------- */
+$white: #ffffff;
+$green_transparent: rgba(39, 174, 96, 0.8);
+$green: rgba(39, 174, 96, 1);
+$orange_transparent: rgba(230, 126, 34, 0.8);
+$orange: rgba(230, 126, 34, 1);
+
+/* ---------- INCLUDES ---------- */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700|Roboto:400,300,700);
+
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +19,15 @@ html, body {
   min-height: 100%;
 }
 
+/* ---------- MISC ---------- */
 body {
   background-image: url('http://sphotos-a.ak.fbcdn.net/hphotos-ak-ash4/1008855_659620994050652_1704849053_o.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  color: $white;
 }
 
 .overlay {
@@ -26,11 +41,25 @@ body {
     background: rgba(64,165,198,0.9);
   }
   &.green {
-    background: rgba(165,198,64,0.9);
+    background: $green_transparent;
+  }
+  &.orange {
+    background: $orange_transparent;
   }
 }
 
 .wrapper {
   z-index: 20;
   position: relative;
+  padding: 6.667em 0 2em 6.667em;
+}
+
+header {
+  .avatar {
+    height: 150px;
+    width: 150px;
+    background-image: url('/img/avatar.jpg');
+    border: 4px solid $orange;
+    border-radius: 100%;
+  }
 }
