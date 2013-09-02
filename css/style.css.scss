@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background-image: url('http://sphotos-a.ak.fbcdn.net/hphotos-ak-ash4/1008855_659620994050652_1704849053_o.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.overlay {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  &.blue {
+    background: rgba(64,165,198,0.9);
+  }
+  &.green {
+    background: rgba(165,198,64,0.9);
+  }
+}
+
+.wrapper {
+  z-index: 20;
+  position: relative;
+}
