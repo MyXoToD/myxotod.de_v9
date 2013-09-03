@@ -1,17 +1,36 @@
 /* ---------- VARIABLES ---------- */
 $white: #ffffff;
+$grey_transparent: rgba(49, 49, 49, 0.50);
 $green_transparent: rgba(39, 174, 96, 0.8);
 $green: rgba(39, 174, 96, 1);
 $orange_transparent: rgba(230, 126, 34, 0.8);
 $orange: rgba(230, 126, 34, 1);
+$blue_transparent: rgba(52, 152, 219, 0.8);
+$blue: rgba(52, 152, 219, 1);
 
 /* ---------- MIXINS ---------- */
-@mixin BorderBox {
+@mixin BorderBox() {
   box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+@mixin scaleThis($x) {
+  transform: scale($x);
+  -o-transform: scale($x);
+  -ms-transform: scale($x);
+  -moz-transform: scale($x);
+  -webkit-transform: scale($x);
+}
+
+@mixin addTransition($x) {
+  transition: all $x+s ease;
+  -o-transition: all $x+s ease;
+  -ms-transition: all $x+s ease;
+  -moz-transition: all $x+s ease;
+  -webkit-transition: all $x+s ease;
 }
 
 /* ---------- INCLUDES ---------- */
@@ -38,14 +57,29 @@ body {
   font-size: 15px;
   font-family: 'Ubuntu', sans-serif;
   color: $white;
-  &.blue .overlay {
-    background: rgba(64,165,198,0.9);
+  &.blue {
+    .overlay {
+      background: $blue_transparent;
+    }
+    .avatar {
+      border: 4px solid $blue;
+    }
   }
-  &.green .overlay {
-    background: $green_transparent;
+  &.green {
+    .overlay {
+      background: $green_transparent;
+    }
+    .avatar {
+      border: 4px solid $green;
+    }
   }
-  &.orange .overlay {
-    background: $orange_transparent;
+  &.orange {
+    .overlay {
+      background: $orange_transparent;
+    }
+    .avatar {
+      border: 4px solid $orange;
+    }
   }
 }
 
@@ -74,22 +108,29 @@ header {
     height: 150px;
     width: 150px;
     background-image: url('/img/avatar.jpg');
-    border: 4px solid $orange;
     border-radius: 100%;
     display: block;
     float: left;
     margin-right: 2em;
+    @include addTransition(0.3);
+    &:hover {
+      @include scaleThis(0.8);
+    }
   }
-  h1 {
-    display: block;
+  .phrases {
+    overflow: hidden;
     float: left;
-    font-weight: 300;
-    font-size: 40px;
     height: 150px;
     padding: 26px 0px;
+    width: 25em;
     @include BorderBox();
-    a {
-      font-weight: 700;
+    h1 {
+      font-weight: 300;
+      font-size: 40px;
+      position: relative;
+      a {
+        font-weight: 700;
+      }
     }
   }
   &:after {
@@ -106,5 +147,33 @@ header {
   .info {
     font-size: 24px;
     font-weight: 300;
+  }
+  .articles {
+    margin-top: 2em;
+    article {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 0.5em;
+      .article_date {
+        float: left;
+        line-height: 26px;
+      }
+      .article_title {
+        float: left;
+        background: $grey_transparent;
+        padding: 5px 10px;
+        border-radius: 3px;
+        margin: 0 0.5em;
+      }
+      .article_category {
+        float: left;
+        line-height: 26px;
+      }
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
   }
 }
