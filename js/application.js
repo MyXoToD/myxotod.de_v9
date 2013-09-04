@@ -35,26 +35,26 @@ function switchPhrases() {
   }
   $('header .phrases').append("<h1 style='top: "+a+"150px;'>"+Phrases[CurrentPhrase]+"</h1>");
   $('header .phrases h1:first-child').animate({
-    top: b+"=176px"
+    top: b+"=163px"
   }, 300, function() {
     $(this).animate({
-      top: a+"=52px"
+      top: a+"=26px"
     }, 200, function() {
       $(this).animate({
-        top: b+"=26px"
+        top: b+"=13px"
       }, 200, function() {
         $('header .phrases h1:first-child').remove();
       });
     });
   });
   $('header .phrases h1:last-child').animate({
-    top: b+"=176px"
+    top: b+"=163px"
   }, 300, function() {
     $(this).animate({
-      top: a+"=52px"
+      top: a+"=26px"
     }, 200, function() {
       $(this).animate({
-        top: b+"=26px"
+        top: b+"=13px"
       }, 200);
     });
   });
