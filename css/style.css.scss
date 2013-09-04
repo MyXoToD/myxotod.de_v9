@@ -27,11 +27,11 @@ $blue: rgba(52, 152, 219, 1);
 }
 
 @mixin addTransition($x) {
-  transition: all $x+s ease;
-  -o-transition: all $x+s ease;
-  -ms-transition: all $x+s ease;
-  -moz-transition: all $x+s ease;
-  -webkit-transition: all $x+s ease;
+  transition: all $x ease;
+  -o-transition: all $x ease;
+  -ms-transition: all $x ease;
+  -moz-transition: all $x ease;
+  -webkit-transition: all $x ease;
 }
 
 /* ---------- INCLUDES ---------- */
@@ -157,36 +157,27 @@ header {
       display: block;
       font-size: 20px;
       margin-bottom: 0.5em;
-      > * {
-        @include addTransition(0.3);
-        float: left;
-      }
       .article_date {
-        width: 4em;
-        text-align: right;
+        float: left;
         font-weight: 100;
+        line-height: 36px;
       }
       .article_title {
+        float: left;
         background: $grey_transparent;
         padding: 5px 10px;
         border-radius: 3px;
-        margin: 0 0.5em;
+        margin: 0 1em;
       }
       .article_category {
-        color: $white_transparent;
+        line-height: 36px;
+        float: left;
+        font-weight: 100;
       }
       &:after {
         content: "";
         display: block;
         clear: both;
-      }
-      &:hover {
-        .article_date, .article_category {
-          color: darken($white_transparent, 20%);
-        }
-        .article_title {
-          background: lighten($grey_transparent, 20%);
-        }
       }
     }
   }

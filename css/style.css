@@ -58,11 +58,11 @@ header .avatar {
   display: block;
   float: left;
   margin-right: 2em;
-  transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease; }
+  transition: all 0.3 ease;
+  -o-transition: all 0.3 ease;
+  -ms-transition: all 0.3 ease;
+  -moz-transition: all 0.3 ease;
+  -webkit-transition: all 0.3 ease; }
   header .avatar:hover {
     transform: scale(0.8);
     -o-transform: scale(0.8);
@@ -107,29 +107,21 @@ header:after {
       display: block;
       font-size: 20px;
       margin-bottom: 0.5em; }
-      .content .articles article > * {
-        transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        float: left; }
       .content .articles article .article_date {
-        width: 4em;
-        text-align: right;
-        font-weight: 100; }
+        float: left;
+        font-weight: 100;
+        line-height: 36px; }
       .content .articles article .article_title {
+        float: left;
         background: rgba(49, 49, 49, 0.5);
         padding: 5px 10px;
         border-radius: 3px;
-        margin: 0 0.5em; }
+        margin: 0 1em; }
       .content .articles article .article_category {
-        color: rgba(255, 255, 255, 0.5); }
+        line-height: 36px;
+        float: left;
+        font-weight: 100; }
       .content .articles article:after {
         content: "";
         display: block;
         clear: both; }
-      .content .articles article:hover .article_date, .content .articles article:hover .article_category {
-        color: rgba(204, 204, 204, 0.5); }
-      .content .articles article:hover .article_title {
-        background: rgba(100, 100, 100, 0.5); }
