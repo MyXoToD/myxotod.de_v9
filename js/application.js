@@ -17,6 +17,16 @@ $(document).ready(function() {
   // Switch phrases
   $('header .phrases h1').html(Phrases[0]);
   PhrasesInterval = setInterval("switchPhrases()", 6000);
+
+  // Stop switching phrases on mouseover
+  $('header .phrases').mouseenter(function() {
+    clearInterval(PhrasesInterval);
+  });
+
+  // Start switch phrases on mouseleave
+  $('header .phrases').mouseleave(function() {
+    PhrasesInterval = setInterval("switchPhrases()", 6000);
+  });
 });
 
 function switchPhrases() {
