@@ -50,7 +50,6 @@ html, body {
 
 /* ---------- MISC ---------- */
 body {
-  background-image: url('/img/bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -58,6 +57,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: $white;
   &.blue {
+    background-image: url('/img/bg.jpg');
     .overlay {
       background: $blue_transparent;
     }
@@ -66,6 +66,7 @@ body {
     }
   }
   &.green {
+    background-image: url('/img/bg.jpg');
     .overlay {
       background: $green_transparent;
     }
@@ -74,6 +75,7 @@ body {
     }
   }
   &.orange {
+    background-image: url('/img/bg.jpg');
     .overlay {
       background: $orange_transparent;
     }
@@ -103,6 +105,7 @@ a {
   padding: 6.667em 0 2em 6.667em;
 }
 
+/* ---------- NAVBAR + HEADER ----------*/
 header {
   .avatar {
     height: 150px;
@@ -136,6 +139,16 @@ header {
       }
     }
   }
+  nav {
+    @include BorderBox();
+    height: 150px;
+    padding: 26px 0;
+    width: auto;
+    float: left;
+    a {
+      font-size: 20px;
+    }
+  }
   &:after {
     content: "";
     display: block;
@@ -143,6 +156,7 @@ header {
   }
 }
 
+/* ---------- CONTENT ---------- */
 .content {
   margin: 2em 0 0 12.333em;
   max-width: 40em;
