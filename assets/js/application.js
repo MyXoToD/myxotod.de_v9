@@ -1,11 +1,11 @@
 var Phrases = new Array(
-  "I go by the<br />name <a href='#'>Max</a>.",
-  "I go to work<br />at <a href='#'>Opoloo</a>.",
-  "I push to master<br />on <a href='#'>Github</a>.",
-  "I code stuff<br />on <a href='#'>CodePen</a>.",
-  "I post tweets<br />on <a href='#'>Twitter</a>.",
-  "I write stories<br />on <a href='#'>Medium</a>.",
-  "I listen to music<br />on <a href='#'>Spotify</a>."
+  "I go by the<br />name <a href='/about/'>Max</a>.",
+  "I go to work<br />at <a href='http://www.opoloo.com' target='_blank'>Opoloo</a>.",
+  "I push to master<br />on <a href='http://www.github.com/MyXoToD' target='_blank'>Github</a>.",
+  "I code stuff<br />on <a href='http://www.codepen.io/MyXoToD' target='_blank'>CodePen</a>.",
+  "I post tweets<br />on <a href='http://www.twitter.com/MyXoToD' target='_blank'>Twitter</a>.",
+  "I write stories<br />on <a href='https://medium.com/@MyXoToD' target='_blank'>Medium</a>.",
+  "I listen to music<br />on <a href='http://open.spotify.com/user/1145610126' target='_blank'>Spotify</a>."
 );
 
 var CurrentPhrase = 0;
