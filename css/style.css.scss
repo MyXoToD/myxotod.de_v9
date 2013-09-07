@@ -1,6 +1,7 @@
 /* ---------- VARIABLES ---------- */
-$white: #ffffff;
-$grey_transparent: rgba(49, 49, 49, 0.50);
+$white: rgba(255, 255, 255, 1);
+$white_transparent: rgba(255, 255, 255, 0.5);
+$grey_transparent: rgba(49, 49, 49, 0.5);
 $green_transparent: rgba(39, 174, 96, 0.8);
 $green: rgba(39, 174, 96, 1);
 $orange_transparent: rgba(230, 126, 34, 0.8);
@@ -159,7 +160,9 @@ header {
       margin-bottom: 0.5em;
       .article_date {
         float: left;
-        line-height: 26px;
+        width: 4em;
+        text-align: right;
+        color: $white_transparent;
       }
       .article_title {
         float: left;
@@ -169,8 +172,8 @@ header {
         margin: 0 0.5em;
       }
       .article_category {
+        color: $white_transparent;
         float: left;
-        line-height: 26px;
       }
       &:after {
         content: "";

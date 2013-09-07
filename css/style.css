@@ -110,7 +110,9 @@ header:after {
       margin-bottom: 0.5em; }
       .content .articles article .article_date {
         float: left;
-        line-height: 26px; }
+        width: 4em;
+        text-align: right;
+        color: rgba(255, 255, 255, 0.5); }
       .content .articles article .article_title {
         float: left;
         background: rgba(49, 49, 49, 0.5);
@@ -118,8 +120,8 @@ header:after {
         border-radius: 3px;
         margin: 0 0.5em; }
       .content .articles article .article_category {
-        float: left;
-        line-height: 26px; }
+        color: rgba(255, 255, 255, 0.5);
+        float: left; }
       .content .articles article:after {
         content: "";
         display: block;
