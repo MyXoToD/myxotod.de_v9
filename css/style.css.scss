@@ -50,7 +50,6 @@ html, body {
 
 /* ---------- MISC ---------- */
 body {
-  /*background-image: url('http://sphotos-a.ak.fbcdn.net/hphotos-ak-ash4/1008855_659620994050652_1704849053_o.jpg');*/
   background-image: url('/img/bg.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -158,14 +157,16 @@ header {
       display: block;
       font-size: 20px;
       margin-bottom: 0.5em;
-      .article_date {
+      > * {
+        @include addTransition(0.3);
         float: left;
+      }
+      .article_date {
         width: 4em;
         text-align: right;
         color: $white_transparent;
       }
       .article_title {
-        float: left;
         background: $grey_transparent;
         padding: 5px 10px;
         border-radius: 3px;
@@ -173,12 +174,19 @@ header {
       }
       .article_category {
         color: $white_transparent;
-        float: left;
       }
       &:after {
         content: "";
         display: block;
         clear: both;
+      }
+      &:hover {
+        .article_date, .article_category {
+          color: darken($white_transparent, 20%);
+        }
+        .article_title {
+          background: lighten($grey_transparent, 20%);
+        }
       }
     }
   }

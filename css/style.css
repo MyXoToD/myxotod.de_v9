@@ -13,7 +13,6 @@ html, body {
 
 /* ---------- MISC ---------- */
 body {
-  /*background-image: url('http://sphotos-a.ak.fbcdn.net/hphotos-ak-ash4/1008855_659620994050652_1704849053_o.jpg');*/
   background-image: url("/img/bg.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -108,21 +107,29 @@ header:after {
       display: block;
       font-size: 20px;
       margin-bottom: 0.5em; }
+      .content .articles article > * {
+        transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        float: left; }
       .content .articles article .article_date {
-        float: left;
         width: 4em;
         text-align: right;
         color: rgba(255, 255, 255, 0.5); }
       .content .articles article .article_title {
-        float: left;
         background: rgba(49, 49, 49, 0.5);
         padding: 5px 10px;
         border-radius: 3px;
         margin: 0 0.5em; }
       .content .articles article .article_category {
-        color: rgba(255, 255, 255, 0.5);
-        float: left; }
+        color: rgba(255, 255, 255, 0.5); }
       .content .articles article:after {
         content: "";
         display: block;
         clear: both; }
+      .content .articles article:hover .article_date, .content .articles article:hover .article_category {
+        color: rgba(204, 204, 204, 0.5); }
+      .content .articles article:hover .article_title {
+        background: rgba(100, 100, 100, 0.5); }
