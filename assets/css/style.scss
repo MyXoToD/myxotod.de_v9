@@ -63,29 +63,30 @@ body {
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   color: $white;
-  &.blue {
-    background-image: url('../img/bg_labs.png');
+  &.red {
+    background-image: url('../img/bg.jpg');
     .overlay {
-      background: $blue_transparent;
+      background: $red_transparent;
     }
     .avatar {
-      border: 4px solid darken($blue, 20%);
+      border: 4px solid darken($red, 20%);
     }
     nav {
       a {
-        background-color: $blue;
+        background-color: darken($red, 20%);
+        &:hover, &.active {
+          color: darken($red, 20%);
+        }
       }
     }
-    .content {
-      .articles {
-        article {
-          .article_title, .article_date, .article_category {
-            background-color: $blue;
-          }
-          &:hover {
-            .article_title, .article_date, .article_category {
-              background-color: $grey;
-            }
+    .articles {
+      article {
+        * {
+          background-color: darken($red, 20%);
+        }
+        &:hover {
+          * {
+            color: darken($red, 20%);
           }
         }
       }
@@ -101,49 +102,49 @@ body {
     }
     nav {
       a {
-        background-color: $green;
+        background-color: darken($green, 20%);
+        &:hover, &.active {
+          color: darken($green, 20%);
+        }
       }
     }
-    .content {
-      .articles {
-        article {
-          .article_title, .article_date, .article_category {
-            background-color: $green;
-          }
-          &:hover {
-            .article_title, .article_date, .article_category {
-              background-color: $grey;
-            }
+    .articles {
+      article {
+        * {
+          background-color: darken($green, 20%);
+        }
+        &:hover {
+          * {
+            color: darken($green, 20%);
           }
         }
       }
     }
   }
-  &.red {
+  &.blue {
     background-image: url('../img/bg.jpg');
     .overlay {
-      background: $red_transparent;
+      background: $blue_transparent;
     }
     .avatar {
-      border: 4px solid darken($red, 20%);
+      border: 4px solid darken($blue, 20%);
     }
     nav {
       a {
-        background-color: $red;
+        background-color: darken($blue, 20%);
+        &:hover, &.active {
+          color: darken($blue, 20%);
+        }
       }
     }
-    .content {
-      .articles {
-        article {
-          .article_title, .article_date, .article_category {
-            background-color: $red;
-          }
-          &:hover {
-            margin-left: 3px;
-            .article_title, .article_date, .article_category {
-              background-color: $grey;
-              box-shadow: none;
-            }
+    .articles {
+      article {
+        * {
+          background-color: darken($blue, 20%);
+        }
+        &:hover {
+          * {
+            color: darken($blue, 20%);
           }
         }
       }
@@ -184,7 +185,7 @@ header {
     margin-right: 2em;
     &:hover {
       @include scaleThis(0.95);
-      border: 4px solid $grey;
+      border: 4px solid $white;
     }
   }
   .phrases {
@@ -219,11 +220,9 @@ header {
       float: left;
       padding: 0.5em 1em;
       margin-right: 0.5em;
-      box-shadow: 1px 1px 0px $white, 2px 2px 0px $white, 3px 3px 0px $white;
-      &:hover {
-        background-color: $grey;
-        box-shadow: none;
-        margin-top: 3px;
+      color: $white;
+      &:hover, &.active {
+        background-color: $white;
       }
     }
     &:after {
@@ -256,21 +255,25 @@ header {
         float: left;
         font-weight: 100;
         padding: 0.250em 0.5em;
-        box-shadow: 1px 1px 0px $white, 2px 2px 0px $white, 3px 3px 0px $white;
       }
       .article_title {
         @include addTransition(0.3);
         float: left;
+        display: block;
         padding: 0.250em 0.5em;
         margin: 0 0.5em;
-        box-shadow: 1px 1px 0px $white, 2px 2px 0px $white, 3px 3px 0px $white;
       }
-      .article_category {
+      .article_info {
         @include addTransition(0.3);
         padding: 0.250em 0.5em;
         float: left;
         font-weight: 100;
-        box-shadow: 1px 1px 0px $white, 2px 2px 0px $white, 3px 3px 0px $white;
+        display: block;
+      }
+      &:hover {
+        * {
+          background-color: $white;
+        }
       }
       &:after {
         @include clearfix();
