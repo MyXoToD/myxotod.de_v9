@@ -1,13 +1,13 @@
 ---
-layout: stream
-title: MyXoToD &raquo; Web-Developer, Speedcuber, Human
+layout: labs
+title: Labs @ MyXoToD.de
 ---
 
 <div class="info">
-  Howdy, my name is Max, I am a 20 year old web developer, work and based in Mayence, Germany. I'm interested in crafting awesome web-apps and speedcubing.
+  This is my lab. You can find any coding related stuff in here.
 </div>
 <section class="articles">
-  {% for post in site.posts %}
+  {% for post in site.category.coding %}
     <article class="article">
       <div class="article_date">{{ post.date | date: "%b %d" }}</div>
       <div class="article_title"><a href="{{ post.url }}">{{ post.title }}</a></div>

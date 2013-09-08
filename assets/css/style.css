@@ -204,21 +204,34 @@ header:after {
 
 /* ---------- FOOTER ---------- */
 .color_plate {
-  position: fixed;
+  position: absolute;
   bottom: 2em;
-  right: 2em; }
+  right: 2em;
+  z-index: 20; }
   .color_plate div {
     float: left;
     width: 1em;
     height: 1em;
     border-radius: 100%;
-    margin-left: 0.5em; }
+    margin-left: 0.5em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease; }
     .color_plate div.red {
       background-color: #e74c3c; }
     .color_plate div.green {
       background-color: #2ecc71; }
     .color_plate div.blue {
       background-color: #3498db; }
+    .color_plate div:hover {
+      transform: scale(1.3);
+      -o-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -webkit-transform: scale(1.3);
+      box-shadow: inset 0px 0px 3px white; }
   .color_plate:after {
     content: "";
     display: block;
