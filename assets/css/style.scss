@@ -288,13 +288,15 @@ header {
   bottom: 2em;
   right: 2em;
   z-index: 20;
-  div {
+  background-color: $white;
+  padding: 0.5em;
+  a {
+    @include addTransition(0);
     float: left;
-    width: 1em;
-    height: 1em;
-    border-radius: 100%;
-    margin-left: 0.5em;
-    @include addTransition(0.3);
+    display: block;
+    width: 2em;
+    height: 2em;
+    margin-right: 0.5em;
     &.red {
       background-color: $red;
     }
@@ -304,9 +306,8 @@ header {
     &.blue {
       background-color: $blue;
     }
-    &:hover {
-      @include scaleThis(1.3);
-      box-shadow: inset 0px 0px 3px $white;
+    &:last-child {
+      margin-right: 0;
     }
   }
   &:after {
