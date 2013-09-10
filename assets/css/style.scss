@@ -175,6 +175,7 @@ a {
 
 /* ---------- NAVBAR + HEADER ----------*/
 header {
+  max-width: 55em;
   .avatar {
     height: 10em;
     width: 10em;
@@ -192,7 +193,7 @@ header {
     overflow: hidden;
     float: left;
     height: 10em;
-    width: 25em;
+    width: 20em;
     @include BorderBox();
     position: relative;
     h1 {
@@ -284,7 +285,7 @@ header {
 
 /* ---------- FOOTER ---------- */
 .color_plate {
-  position: absolute;
+  position: fixed;
   bottom: 2em;
   right: 2em;
   z-index: 20;
