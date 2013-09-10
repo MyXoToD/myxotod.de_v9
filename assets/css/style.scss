@@ -170,12 +170,14 @@ a {
 .wrapper {
   z-index: 20;
   position: relative;
-  padding: 6.667em 0 2em 6.667em;
+  @include BorderBox();
+  padding: 6.667em 2em 2em 6.667em;
 }
 
 /* ---------- NAVBAR + HEADER ----------*/
 header {
   max-width: 55em;
+  width: 100%;
   .avatar {
     height: 10em;
     width: 10em;

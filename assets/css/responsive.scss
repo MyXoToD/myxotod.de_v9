@@ -1,4 +1,19 @@
+/* ********** TABLET ********** */
 @media screen and (max-width: 960px) {
+  .wrapper {
+    padding: 2em;
+  }
+  header {
+    nav {
+      width: 21em;
+      margin: 0 auto;
+      clear: both;
+      float: none;
+    }
+  }
+  .content {
+    margin: 2em 0 0 2em;
+  }
   .color_plate {
     display: none;
   }
